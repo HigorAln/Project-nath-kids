@@ -28,7 +28,7 @@ export default function CompHeader({fun,modal,tema,setTema}){
             </Div>
             <Shopping>
                 {tema ? <Imagem onClick={()=>setTema(!tema)} src={LightTurnOn} /> : <Imagem onClick={()=>setTema(!tema)} src={LightTurnOff} />}
-                {tema ? <Imagem src={Url} /> : <Imagem src={UrlDark} />}
+                {/* {tema ? <Imagem src={Url} /> : <Imagem src={UrlDark} />} */}
             </Shopping>
         </Header>
     )

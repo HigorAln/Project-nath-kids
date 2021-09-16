@@ -8,7 +8,6 @@ import {
     Menu,
 } from '../styles/pages/Modal'
 import {SpanMenu} from '../styles/components/header'
-import {Span} from '../styles/components/header'
 import Link from 'next/link'
 
 export default function ModalComponent({fun}) {
@@ -25,14 +24,16 @@ export default function ModalComponent({fun}) {
                 </div>
             </Menu>
             <Main>
-                <Link href="/" passHref>
+                <Link href="/">
                     <a><h1>Home</h1></a>
                 </Link>
-                <Link href='/contact' passHref>
+                <Link href='/contact'>
                     <h1>Contact</h1>
                 </Link>
-                <h1>Models</h1>
-                <Link href='/social' passHref>
+                <Link href='/categories'>
+                    <h1>Categories</h1>
+                </Link>
+                <Link href='/social'>
                     <h1>Social Network</h1>
                 </Link>
                 <Footer>
