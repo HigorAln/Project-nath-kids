@@ -18,6 +18,7 @@ import { client } from '../lib/prismic';
 import Prismic from 'prismic-javascript'
 import { Document } from 'prismic-javascript/types/documents'
 import Link from 'next/link'
+import Image from 'next/image'
 
 
 const Modal = dynamic(
@@ -56,7 +57,7 @@ export default function Categories({products}: HomeProps){
     const handleOut2 = ()=>{
         document.getElementById('hidden-2').style.opacity='0';
     }
-    
+    console.log(vestidos[2].data.trumbnail.url)
     return(
         <ThemeProvider theme={tema ? ThemeWhite : ThemeDark}>
             <SEO title={`• Nath Kids |  Contact •  `}/>
@@ -65,10 +66,10 @@ export default function Categories({products}: HomeProps){
 
             <Page>
                 <CardCategoriesVestidos>
-                    <Link href='/vestidos'>
+                    <Link href='/categories/vestidos'>
                         <Model onMouseOver={handleOver} onMouseOut={handleOut}>
                             <h2>Vestidos</h2>
-                            <img src={vestidos[2].data.trumbnail.url} />
+                            <img src={vestidos[2].data.trumbnail.url}/>
                         </Model>
                     </Link>
                     <Container id='hidden'>
@@ -80,7 +81,7 @@ export default function Categories({products}: HomeProps){
                     </Container>
                 </CardCategoriesVestidos>
                 <CardCategoriesConjuntos>
-                    <Link href='/conjuntos'>
+                    <Link href='/categories/conjuntos'>
                         <Model onMouseOver={handleOver2} onMouseOut={handleOut2}>
                             <h2>Conjuntos</h2>
                             <img src={conjuntos[1].data.trumbnail.url} />
