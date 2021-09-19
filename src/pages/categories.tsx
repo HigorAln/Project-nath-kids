@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SEO from '../components/SEO';
 import CompHeader from '../components/Header';
 import { ThemeDark, ThemeWhite } from '../styles/themes/theme';
@@ -36,7 +36,17 @@ export default function Categories({products}: HomeProps){
     const [modal, setModal] = useState(false)
     const handleModal = ()=>{
         setModal(!modal)
-      }
+    }
+    useEffect(()=>{
+        const valueTheme = localStorage.getItem('USER_THEME')
+    
+        if( valueTheme === 'light'){
+          setTema(true)
+        }
+        if(valueTheme === 'dark'){
+          setTema(false)
+        }
+      },[])
     ////////////////////////////////////////
     const vestidos = products.filter((e)=>{
         return e.data.category.slug === "vestidos"

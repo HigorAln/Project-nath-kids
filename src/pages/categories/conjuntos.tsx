@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next';
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import CompHeader from '../../components/Header';
 import SEO from '../../components/SEO';
@@ -40,6 +40,16 @@ export default function Vestidos({data}:HomeProps){
     const handleModal = ()=>{
         setModal(!modal)
     }
+    useEffect(()=>{
+        const valueTheme = localStorage.getItem('USER_THEME')
+    
+        if( valueTheme === 'light'){
+          setTema(true)
+        }
+        if(valueTheme === 'dark'){
+          setTema(false)
+        }
+      },[])
     /////////////////////////////////////////
     const vestidos = data.filter((e)=>{
         return e.data.category.slug === "conjuntos"

@@ -6,11 +6,12 @@ import CompHeader from "../components/Header"
 import SEO from "../components/SEO"
 import Contrast from '../components/Contrast'
 import {Seta} from '../styles/pages/home'
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import dynamic from 'next/dynamic'
 import Cards from "../components/Cards"
 import { ThemeProvider } from "styled-components"
 import { ThemeDark, ThemeWhite } from "../styles/themes/theme"
+import {parseCookies} from 'nookies'
 
 const Modal = dynamic(
   ()=> import('../components/Modal'),
@@ -24,7 +25,17 @@ type HomeProps = {
 export default function Home({RecommendedProducts}: HomeProps) {
   const [modal, setModal] = useState(false);
   const [tema,setTema]=useState(true);
-  
+
+  useEffect(()=>{
+    const valueTheme = localStorage.getItem('USER_THEME')
+
+    if( valueTheme === 'light'){
+      setTema(true)
+    }
+    if(valueTheme === 'dark'){
+      setTema(false)
+    }
+  },[])
 
   const Pular = ()=>{
     window.scroll(0, ((document.documentElement.scrollTop - 97.3) + window.innerHeight))
@@ -49,18 +60,17 @@ export default function Home({RecommendedProducts}: HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps = async () =>{
-
   const products = await client().query([
     Prismic.Predicates.at('document.type','product')
   ])
-  
   const contrast = await client().query([
     Prismic.Predicates.at('document.id','YTupcBAAACIA0uMH')
   ])
-
   const RecommendedProducts = await client().query([
     Prismic.Predicates.at('document.type','recommended')
   ])
+
+  
 
   return {
     props : {

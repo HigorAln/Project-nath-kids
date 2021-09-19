@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { ThemeDark, ThemeWhite } from "../styles/themes/theme";
 import dynamic from "next/dynamic";
@@ -21,7 +21,17 @@ export default function Social(){
     const [modal, setModal] = useState(false)
     const handleModal = ()=>{
         setModal(!modal)
-      }
+    }
+    useEffect(()=>{
+        const valueTheme = localStorage.getItem('USER_THEME')
+    
+        if( valueTheme === 'light'){
+          setTema(true)
+        }
+        if(valueTheme === 'dark'){
+          setTema(false)
+        }
+      },[])
     //////////////////////////////////
     const facebook = tema ? '/facebook_black.png' : '/facebook_white.png'
     const instagram = tema ? '/instagram_black.png' : '/instagram_white.png'

@@ -6,7 +6,7 @@ import PrismicDOM from 'prismic-dom'
 import CompHeader from "../../components/Header"
 import SoldArea from "../../components/SoldArea"
 import SEO from "../../components/SEO"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import dynamic from "next/dynamic"
 import { ThemeProvider } from "styled-components"
 import { ThemeDark, ThemeWhite } from "../../styles/themes/theme"
@@ -27,7 +27,17 @@ export default function Product({product}: HomeProps){
     const [modal, setModal] = useState(false)
     const handleModal = ()=>{
         setModal(!modal)
-      }
+    }
+    useEffect(()=>{
+        const valueTheme = localStorage.getItem('USER_THEME')
+    
+        if( valueTheme === 'light'){
+          setTema(true)
+        }
+        if(valueTheme === 'dark'){
+          setTema(false)
+        }
+      },[])
     if(router.isFallback){
         return <p>Loding...</p>
     }
