@@ -5,7 +5,9 @@ export const ThemeWhite = {
     shadow: "#bbb",
     backgroundPromocao: '#E6B0AA',
     backgroundInput: 'white',
-    backgroundCard:'white'
+    backgroundCard:'white',
+    backgroundFooter: '#eee',
+    links: '#EDC960',
 }
 
 export const ThemeDark = {
@@ -16,4 +18,6 @@ export const ThemeDark = {
     backgroundPromocao: '#E6a0aa',
     backgroundInput: '#555555',
     backgroundCard: '#ddd',
+    backgroundFooter: '#777',
+    links: 'white'
 }

@@ -9,7 +9,8 @@ export const Header = styled.header`
     display:flex;
     align-items:center;
     box-shadow:0 0 10px ${({theme}) => theme.shadow};
-    background-color: ${({theme}) => theme.background}
+    background-color: ${({theme}) => theme.background};
+    z-index:10;
 
     
 `

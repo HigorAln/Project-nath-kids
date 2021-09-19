@@ -42,7 +42,7 @@ export default function Vestidos({data}:HomeProps){
     }
     /////////////////////////////////////////
     const vestidos = data.filter((e)=>{
-        return e.data.category.slug === "vestidos"
+        return e.data.category.slug === "conjuntos"
     })
 
     const [atual,setAtual] = useState(2)    
@@ -58,6 +58,7 @@ export default function Vestidos({data}:HomeProps){
             setButtonMore(false)
         }
 }
+console.log(data)
     return(
         <ThemeProvider theme={tema ? ThemeWhite : ThemeDark}>
             <SEO title={`• Nath Kids |  Vestidos •  `}/>
