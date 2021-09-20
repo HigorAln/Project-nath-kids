@@ -5,6 +5,7 @@ export const Page = styled.div`
     width: 100%;
     background: ${({theme})=>theme.background};
     display:flex;
+    transition: all 0.5s;
 `
 
 export const CardCategoriesVestidos = styled.div`

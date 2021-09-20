@@ -11,6 +11,7 @@ export const Header = styled.header`
     box-shadow:0 0 10px ${({theme}) => theme.shadow};
     background-color: ${({theme}) => theme.background};
     z-index:10;
+    transition: all 0.5s;
 
     
 `
@@ -42,7 +43,11 @@ export const DivMenu = styled.div`
 export const Span = styled.span`
     h1{
         color:${({theme}) => theme.color};
-        user-select:none;
+        cursor: pointer;
+        
+    }
+    a{
+        text-decoration: none;
     }
 
     &::before{

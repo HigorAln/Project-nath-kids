@@ -7,7 +7,7 @@ export const Page = styled.div`
     justify-content: center;
     align-items: center;
     background-color: ${({theme}) => theme.background};
-    transition: all 0.2s;
+    transition: all 0.5s;
 `
 
 export const Formulario = styled.form`

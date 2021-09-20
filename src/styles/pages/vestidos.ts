@@ -10,6 +10,7 @@ export const Page = styled.div`
     z-index: 0;
     background-color: ${({theme})=>theme.background};
     padding-bottom: 30px;
+    transition: all 0.5s;
 
 `
 export const Cards = styled.div`

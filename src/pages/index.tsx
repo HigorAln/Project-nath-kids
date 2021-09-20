@@ -11,7 +11,6 @@ import dynamic from 'next/dynamic'
 import Cards from "../components/Cards"
 import { ThemeProvider } from "styled-components"
 import { ThemeDark, ThemeWhite } from "../styles/themes/theme"
-import {parseCookies} from 'nookies'
 
 const Modal = dynamic(
   ()=> import('../components/Modal'),

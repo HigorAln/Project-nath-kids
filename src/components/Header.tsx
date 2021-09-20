@@ -1,13 +1,10 @@
 import { Div, Header, Imagem, Shopping, Span, DivMenu, SpanMenu, SpanMenu2} from '../styles/components/header'
-import dynamic from 'next/dynamic'
-import {setCookie} from 'nookies'
+import Link from 'next/link'
 
 
 
 
 export default function CompHeader({fun,modal,tema,setTema}){
-    const Url = '/shopping_cart.svg'
-    const UrlDark = '/shopping_cart_white.svg'
     const LightTurnOff = '/light_white.svg'
     const LightTurnOn = '/light_turnon.png'
 
@@ -35,7 +32,7 @@ export default function CompHeader({fun,modal,tema,setTema}){
             
             <Div>
                 <Span>
-                    <h1>Nath Kids</h1>
+                    <Link href='/'><a><h1>Nath Kids</h1></a></Link>
                 </Span>
             </Div>
             <Shopping>

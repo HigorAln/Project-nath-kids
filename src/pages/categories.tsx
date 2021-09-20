@@ -31,23 +31,24 @@ type HomeProps = {
 }
 
 export default function Categories({products}: HomeProps){
-    ////////////////////////////////////////
+    /* Header */
     const [tema,setTema]=useState(true);
     const [modal, setModal] = useState(false)
     const handleModal = ()=>{
         setModal(!modal)
     }
     useEffect(()=>{
+
         const valueTheme = localStorage.getItem('USER_THEME')
-    
         if( valueTheme === 'light'){
-          setTema(true)
+            setTema(true)
         }
         if(valueTheme === 'dark'){
-          setTema(false)
+            setTema(false)
         }
-      },[])
-    ////////////////////////////////////////
+    })
+
+    
     const vestidos = products.filter((e)=>{
         return e.data.category.slug === "vestidos"
     })

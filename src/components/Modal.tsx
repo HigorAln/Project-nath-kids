@@ -37,7 +37,7 @@ export default function ModalComponent({fun}) {
                     <h1>Social Network</h1>
                 </Link>
                 <Footer>
-                    <span>Designer</span> - <span>Desenveloper</span> - <span>Production</span>
+                    <Link href='/credits'><a><span>Designer</span></a></Link> - <Link href='/credits'><a><span>Desenveloper</span></a></Link> - <Link href='/credits'><a><span>Production</span></a></Link>
                 </Footer>
             </Main>
             <Recommended></Recommended>

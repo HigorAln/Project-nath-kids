@@ -13,6 +13,7 @@ export const Modal = styled.div`
     grid-template-columns:  15% 70% 15%;
     grid-template-rows: 100%;
     background-color:${({theme}) => theme.background};
+    transition: all 0.5s;
 
 `
 
@@ -23,6 +24,7 @@ export const Menu = styled.div`
     width:100%;
     height:14vh;
     display:flex;
+    transition: all 0.5s;
 
     div{
         width:20%;
@@ -63,6 +65,7 @@ export const Main = styled.div`
     align-items:center;
     flex-direction: column;
     text-align: center;
+    transition: all 0.5s;
 
     a{
         text-decoration: none;
@@ -74,7 +77,7 @@ export const Main = styled.div`
         cursor:pointer;
         font-family: 'Comfortaa', cursive;
         font-weight:lighter;
-        color:${({theme}) => theme.color}
+        color:${({theme}) => theme.color};
     }
     h1:hover{
         filter:opacity(70%);

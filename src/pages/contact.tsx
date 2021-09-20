@@ -84,8 +84,8 @@ export default function Contact(){
                         onChange={(e)=>setAssunt(e.target.value)}
                     />
                     <textarea 
-                        cols="30" 
-                        rows="8" 
+                        cols={30}
+                        rows={8} 
                         minLength={10} 
                         maxLength={255} 
                         placeholder='Write here! (255)'

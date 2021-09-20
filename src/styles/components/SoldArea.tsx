@@ -8,6 +8,7 @@ export const Body = styled.div`
     grid-template-columns: 40% 60%;
     grid-template-rows: 70% 30%;
     background-color: ${({theme}) => theme.background};
+    transition: all 0.5s;
 
     @media screen and (max-width: 375px){
         grid-template-columns: 100%;
