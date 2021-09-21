@@ -6,7 +6,12 @@ export const Page = styled.div`
     background: ${({theme})=>theme.background};
     display:flex;
     transition: all 0.5s;
+
+    @media screen and (max-width:600px){
+        flex-direction: column;
+    }
 `
+
 
 export const CardCategoriesVestidos = styled.div`
     width: 50%;
@@ -15,6 +20,14 @@ export const CardCategoriesVestidos = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap:wrap;
+
+    @media screen and (max-width:600px){
+        width:100%;
+        height: 100%;
+    }
+    @media screen and (max-width:800px){
+            
+    }
 `
 export const Model = styled.div`
     background-color: ${({theme})=> theme.backgroundCard};
@@ -29,7 +42,6 @@ export const Model = styled.div`
     align-items: center;
     flex-direction:column;
     
-
     &:hover{
         opacity:1;
     }
@@ -45,6 +57,12 @@ export const Model = styled.div`
         border-radius: 10px;
         transform: scale(1);
     }
+
+    @media screen and (max-width:800px){
+        width:200px;
+        height:250px;
+    }
+        
 `
 export const Container = styled.div`
     width: 100%;
@@ -53,6 +71,9 @@ export const Container = styled.div`
     overflow: hidden;
     opacity:0;
     transition: all 0.2s;
+    @media screen and (max-width:800px){
+        display:none;        
+    }
 `
 export const Hidden = styled.div`
     position: relative;
@@ -82,4 +103,8 @@ export const CardCategoriesConjuntos = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap:wrap;
+    
+    @media screen and (max-width:600px){
+        width:100%;        
+    }
 `

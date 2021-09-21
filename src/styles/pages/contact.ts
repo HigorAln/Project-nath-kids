@@ -23,6 +23,7 @@ export const Formulario = styled.form`
         margin-bottom: 20px;
     }
 
+    
     input, textarea{
         padding: 10px;
         font-family: 'Comfortaa', cursive;
@@ -53,6 +54,23 @@ export const Formulario = styled.form`
         &:hover{
             border:0;
             box-shadow: 0 0 25px ${({theme}) => theme.shadow};
+        }
+        @media screen and (max-width:600px){
+        }
+    }
+
+    @media screen and (max-width:600px){
+        width: 95%;
+        height:100%;
+        justify-content:center;
+        
+        input, textarea{
+            font-size: 18px;
+            padding:20px
+        }
+        h1{
+            font-size: 20px;
+            text-align: center;
         }
     }
 `

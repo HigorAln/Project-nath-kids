@@ -13,6 +13,8 @@ export const Header = styled.header`
     z-index:10;
     transition: all 0.5s;
 
+
+
     
 `
 
@@ -61,10 +63,14 @@ export const Span = styled.span`
 
     @media screen and (max-width:600px){
         margin-left:100px;
+        display: none;
     };
 
     @media screen and (max-width:375px){
         margin-left:50px;
+        &::before{
+            display: none;
+        }
     }
 }
 

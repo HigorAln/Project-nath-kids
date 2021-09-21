@@ -10,6 +10,7 @@ import { useEffect, useState } from "react"
 import dynamic from "next/dynamic"
 import { ThemeProvider } from "styled-components"
 import { ThemeDark, ThemeWhite } from "../../styles/themes/theme"
+import Footer from '../../components/Footer'
 
 const Modal = dynamic(
     ()=> import('../../components/Modal'),
@@ -57,6 +58,7 @@ export default function Product({product}: HomeProps){
                 price={product.data.price}
             />
         </div>
+        <Footer />
         </ThemeProvider>
     )
 }

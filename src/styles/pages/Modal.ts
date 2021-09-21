@@ -49,7 +49,7 @@ export const EmptySpan = styled(Span)`
     user-select:none;
     color:${({theme}) => theme.color};
 
-    @media(max-width: 880px){
+    @media(max-width: 970px){
         h1{
             display:none;
         }
@@ -111,6 +111,11 @@ export const Main = styled.div`
            filter:none;
         }
     }
+    @media screen and (max-width:550px){
+        h1{
+            font-size:35px;
+        }
+    }
 `
 export const Footer = styled.div`
     width:60%;
@@ -131,6 +136,20 @@ export const Footer = styled.div`
     }
     span:active{
         filter: opacity(100%);
+    }
+    @media screen and (max-width:970px){
+         width:80% ;
+    }
+    @media screen and (max-width:700px){
+        width: 100%;
+        span{
+            font-size:15px;
+        }
+    }
+    @media screen and (max-width:550px){
+        span{
+            font-size:12px;
+        }
     }
 
     @media(max-width: 375px){

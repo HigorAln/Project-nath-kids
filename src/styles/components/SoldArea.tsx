@@ -10,7 +10,7 @@ export const Body = styled.div`
     background-color: ${({theme}) => theme.background};
     transition: all 0.5s;
 
-    @media screen and (max-width: 375px){
+    @media screen and (max-width: 600px){
         grid-template-columns: 100%;
         grid-template-rows: 50% 50%;
         height:100vh;
@@ -23,9 +23,9 @@ export const AreaPhoto = styled.div`
     align-items:center;
     flex-direction:column;
 
-    @media screen and (max-width: 375px){
-       margin-bottom:-50px;
-
+    @media screen and (max-width: 600px){
+        margin-bottom:50px;
+        
 
     }
 `
@@ -35,16 +35,17 @@ export const Imagem = styled.img`
     transition: all .4s ease-in;
     box-shadow: 0 0 10px ${({theme}) => theme.shadow};
     border-radius: 25px;
+   
+
     &:hover{
         transform:scale(1)
     }
-    @media screen and (max-width: 375px){
-        width:90%;
-        transform:scale(1);
 
-        &:hover{
-            transform:scale(1);
-        }
+    @media screen and (max-width: 600px){
+        width: 300px;
+    }
+    @media screen and (max-width: 375px){
+        width: 250px;
     }
 `
 export const SoldAreaDiv = styled.div`
@@ -60,7 +61,7 @@ export const Paragrafo = styled.p`
     letter-spacing:2px;
     color:${({theme}) => theme.color};
 
-    @media screen and (max-width: 375px){
+    @media screen and (max-width: 680px){
        font-size:25px;
     }
 `
@@ -93,6 +94,7 @@ export const DivButton = styled.div`
     display:flex;
     justify-content:space-around;
     align-items:center;
+   
 
     button{
         width:40%;
@@ -109,6 +111,7 @@ export const DivButton = styled.div`
     }
     @media screen and (max-width: 375px){
         width:100%;
+        margin-bottom:60px;
         
         button{
             width:40%;
@@ -116,7 +119,6 @@ export const DivButton = styled.div`
             letter-spacing:1px;
             border:0;
             border-radius:10px;
-            margin-top:20px;
         }
     }
 `

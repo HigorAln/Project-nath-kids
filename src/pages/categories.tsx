@@ -18,7 +18,7 @@ import { client } from '../lib/prismic';
 import Prismic from 'prismic-javascript'
 import { Document } from 'prismic-javascript/types/documents'
 import Link from 'next/link'
-import Image from 'next/image'
+import Footer from '../components/Footer'
 
 
 const Modal = dynamic(
@@ -55,20 +55,6 @@ export default function Categories({products}: HomeProps){
     const conjuntos = products.filter((e)=>{
         return e.data.category.slug === 'conjuntos'
     })
-
-    const handleOver = ()=>{
-        document.getElementById('hidden').style.opacity='0.5';
-    }
-    const handleOut = ()=>{
-        document.getElementById('hidden').style.opacity='0';
-    }
-    const handleOver2 = ()=>{
-        document.getElementById('hidden-2').style.opacity='0.5';
-    }
-    const handleOut2 = ()=>{
-        document.getElementById('hidden-2').style.opacity='0';
-    }
-    console.log(vestidos[2].data.trumbnail.url)
     return(
         <ThemeProvider theme={tema ? ThemeWhite : ThemeDark}>
             <SEO title={`• Nath Kids |  Contact •  `}/>
@@ -78,36 +64,36 @@ export default function Categories({products}: HomeProps){
             <Page>
                 <CardCategoriesVestidos>
                     <Link href='/categories/vestidos'>
-                        <Model onMouseOver={handleOver} onMouseOut={handleOut}>
+                        <Model>
                             <h2>Vestidos</h2>
                             <img src={vestidos[2].data.trumbnail.url}/>
                         </Model>
                     </Link>
-                    <Container id='hidden'>
+                    {/* <Container id='hidden'>
                         <Hidden>
                             <ModelHidden><img src={vestidos[2].data.trumbnail.url} /></ModelHidden>
                             <ModelHidden><img src={vestidos[3].data.trumbnail.url} /></ModelHidden>
                             <ModelHidden><img src={vestidos[4].data.trumbnail.url} /></ModelHidden>
                         </Hidden>
-                    </Container>
+                    </Container> */}
                 </CardCategoriesVestidos>
                 <CardCategoriesConjuntos>
                     <Link href='/categories/conjuntos'>
-                        <Model onMouseOver={handleOver2} onMouseOut={handleOut2}>
+                        <Model>
                             <h2>Conjuntos</h2>
                             <img src={conjuntos[1].data.trumbnail.url} />
                         </Model>
                     </Link>
-                    <Container id='hidden-2'>
+                    {/* <Container id='hidden-2'>
                         <Hidden>
                             <ModelHidden><img src={conjuntos[1].data.trumbnail.url} /></ModelHidden>
                             <ModelHidden><img src={conjuntos[0].data.trumbnail.url} /></ModelHidden>
                             <ModelHidden><img src={conjuntos[1].data.trumbnail.url} /></ModelHidden>
                         </Hidden>
-                    </Container>
+                    </Container> */}
                 </CardCategoriesConjuntos>
             </Page>
-
+            <Footer />
         </ThemeProvider>
     )
 }

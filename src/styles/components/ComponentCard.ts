@@ -34,6 +34,7 @@ export const Oferta = styled.span`
     place-items: center;
     background-color: ${({theme}) => theme.backgroundPromocao};
     color:${({theme}) =>theme.color};
+    border-radius: 0 0px 5px 5px;
 
     p{
         padding: 5px 5px;

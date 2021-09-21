@@ -4,6 +4,7 @@ export const DivPg1 = styled.div`
     height: 86vh;
     width: 100%;
     background-color: ${({theme})=>theme.background};
+    border:0;
 `
 export const DivCards = styled.div`
     width: 20%;
@@ -26,6 +27,29 @@ export const DivCards = styled.div`
         margin-bottom: 5px;
         border-radius: 10px;
     }
+
+    @media screen and (max-width:600px){
+        width: 80%;
+        height: 60%;
+    }
+    @media screen and (max-width:1090px){
+        width: 30%;
+        transform: scale(1);
+    }
+    @media screen and (max-width:850px){
+        width: 300px;
+  
+    }
+    @media screen and (max-width:620px){
+        width: 400px;
+        height: 400px;
+    }
+    @media screen and (max-width:440px){
+        width: 250px;
+        height: 300px;
+    }
+    
+    
 `
 
 export const Cartas = styled.div`
@@ -36,6 +60,20 @@ export const Cartas = styled.div`
     align-items:center;
     background-color: ${({theme})=>theme.background};
     
+    @media screen and (max-width:600px){
+         flex-direction:column;
+         height: 240%;
+    }
+   
+    @media screen and (max-width:850px){
+        flex-wrap:wrap;
+    }
+    @media screen and (max-width:620px){
+        flex-direction:column;
+        flex-wrap:nowrap;
+        height: 240vh;
+    }
+
 `
 
 export const SpacePg2 = styled.div`
@@ -52,6 +90,10 @@ export const SpacePg2 = styled.div`
         letter-spacing: 2px;
         font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
         color:${({theme}) => theme.color};
+        
+        @media screen and (max-width:600px){
+            font-size:25px;
+        }
     }
     h1::after{
         content: '';

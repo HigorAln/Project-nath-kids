@@ -8,6 +8,7 @@ import {
 } from '../styles/pages/social'
 import SocialNetwork from "../components/SocialNetwork";
 import SEO from "../components/SEO";
+import Footer from '../components/Footer'
 
 const Modal = dynamic(
     ()=> import('../components/Modal'),
@@ -52,7 +53,7 @@ export default function Social(){
                 <SocialNetwork text={`gmail`} url={gmail} network='http://gmail.com'/>
             </Page>
 
-
+            <Footer />
         </ThemeProvider>
     )
 }

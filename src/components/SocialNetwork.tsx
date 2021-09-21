@@ -15,10 +15,14 @@ const Link = styled.a`
     color: ${({theme}) => theme.color};
     transition: all 0.2s;
     
-
     &:hover{
         border:0;
         box-shadow: 0 0 25px ${({theme}) =>theme.shadow};
+    }
+
+    @media screen and (max-width:600px){
+         width: 200px;
+         height: 200px;
     }
 `
 const Paragrafo = styled.p`

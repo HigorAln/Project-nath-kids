@@ -19,9 +19,8 @@ import {
     DivImage,
     SeeMore,
     DivInfo,
-    Footer,
-
 } from '../../styles/pages/vestidos'
+import Footer from '../../components/Footer'
 
 const Modal = dynamic(
     ()=> import('../../components/Modal'),
@@ -82,7 +81,7 @@ export default function Vestidos({data}:HomeProps){
                         <Cards key={value.id}>
                                 <Inside>
                                     <DivImage>
-                                        <Image src={value.data.trumbnail.url} width={400} height={400}  />
+                                        <img src={value.data.trumbnail.url}  />
                                     </DivImage>
                                     <DivInfo>
                                         <h2>{PrimiscDOM.RichText.asText(value.data.title)}</h2>
@@ -109,20 +108,7 @@ export default function Vestidos({data}:HomeProps){
                 </SeeMore>
                 }
             </Page>
-            <Footer>
-                <div>
-                    <Link href='/'><a><li>Home</li></a></Link>
-                    <Link href='/categories/vestidos'><a><li>Vestidos</li></a></Link>
-                    <Link href='/categories/conjuntos'><a><li>Conjunto</li></a></Link>
-                    <Link href='/contact'><a><li>Contact</li></a></Link>
-                    <Link href='/social'><a><li>Social Networks</li></a></Link>
-                </div>
-                <div>
-                    <Link href='/credits'><a><li>Designer</li></a></Link>
-                    <Link href='/credits'><a><li>Desenveloper</li></a></Link>
-                    <Link href='/credits'><a><li>Production</li></a></Link>
-                </div>
-            </Footer>
+           <Footer />
 
         </ThemeProvider>
     )

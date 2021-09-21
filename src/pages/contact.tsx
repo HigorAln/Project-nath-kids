@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import CompHeader from "../components/Header";
 import { ThemeDark, ThemeWhite } from "../styles/themes/theme";
+import SEO from "../components/SEO";
+import Footer from '../components/Footer'
 import {
     Page,
     Formulario,
 }from '../styles/pages/contact'
-import SEO from "../components/SEO";
 
 const Modal = dynamic(
     ()=> import('../components/Modal'),
@@ -95,6 +96,7 @@ export default function Contact(){
                     <button>Send</button>
                 </Formulario>
             </Page>
+            <Footer/>
         </ThemeProvider>
     )
 }

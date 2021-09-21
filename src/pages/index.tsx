@@ -11,6 +11,7 @@ import dynamic from 'next/dynamic'
 import Cards from "../components/Cards"
 import { ThemeProvider } from "styled-components"
 import { ThemeDark, ThemeWhite } from "../styles/themes/theme"
+import Footer from '../components/Footer'
 
 const Modal = dynamic(
   ()=> import('../components/Modal'),

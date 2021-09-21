@@ -8,5 +8,9 @@ export const Page = styled.div`
     align-items: center;
     flex-wrap: wrap;
     background-color: ${({theme}) => theme.background};
-    transition: all 0.5s
+    transition: all 0.5s;
+
+    @media screen and (max-width:600px){
+        height: 100% ;
+    }
 `

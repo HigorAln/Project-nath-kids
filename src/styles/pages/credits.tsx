@@ -18,9 +18,13 @@ export const Div = styled.div`
     font-family: "Comfortaa";
     font-weight: 500;
     color:${({theme}) => theme.color};
+
     span{
         display: block;
         text-align: center;
         font-family: "Comfortaa";
+    }
+    @media screen and (max-width:600px){
+        font-size: 20px;
     }
 `

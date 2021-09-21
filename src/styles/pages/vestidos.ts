@@ -21,6 +21,11 @@ export const Cards = styled.div`
     border-radius: 10px;
     box-shadow: 0 0 10px ${({theme})=>theme.shadow};
     background-color: white;
+    
+    @media screen and (max-width:850px){
+         height:500px;
+    }
+
 `
 
 export const Inside = styled.a`
@@ -29,18 +34,34 @@ export const Inside = styled.a`
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 100%;
+
+    @media screen and (max-width:850px){
+         grid-template-columns:100%;
+         grid-template-rows: 60% 40%;
+    }
 `
 export const DivImage = styled.div`
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: ${({theme})=>theme.background};
     
 
     img{
-        width: 80%;
-        height: 80%;
+        width: 250px;
         border-radius: 10px 0px 0px 10px;
+
+        @media screen and (max-width:930px){
+            width: 200px;
+        }
+        @media screen and (max-width:850px){
+            width: 230px;
+        }
     }
+
+    
 `
 export const DivInfo = styled.div`
     display: grid;
@@ -67,6 +88,16 @@ export const DivInfo = styled.div`
         justify-content: space-evenly;
     }
 
+    @media screen and (max-width:850px){
+         text-align:center;
+
+         div{
+             height: 50px;
+         }
+         p{
+             font-size:16px ;
+         }
+    }
 
 `
 export const Button = styled.button`
@@ -84,6 +115,8 @@ export const Button = styled.button`
     &:hover{
         box-shadow:0 0 10px #bbb;
     }
+
+    
 `
 export const SeeMore = styled.button`
     width: 80%;
@@ -122,5 +155,11 @@ export const Footer = styled.div`
         font-family: "Comfortaa";
         padding: 3px;
 
+    }
+
+    @media screen and (max-width: 375px){
+      li{
+          font-size:15px;
+      }  
     }
 `
