@@ -47,9 +47,9 @@ export default function Social(){
 
             <Page>
                 <SocialNetwork text={`facebook`} url={facebook} network="https://www.facebook.com/natalia.rayanne.3"/>
-                <SocialNetwork text={`instagram`} url={instagram} network='https://www.instagram.com/nataliarayanne16/'/>
-                <SocialNetwork text={`telegram`} url={telegram} network='http://telegram.com/'/>
-                <SocialNetwork text={`whatsapp`} url={whatsapp} network='https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F5581989704654&e=ATNGdmVdi2RNEF8qSTZgb3AyHxNwIyGYOqfmMyhMOASFmgDEJBdY6gNukOqRDNCAgKh_Ngi2HbfilMecBOXpFQ&s=1'/>
+                <SocialNetwork text={`instagram`} url={instagram} network='https://www.instagram.com/nathkiids/'/>
+                <SocialNetwork text={`telegram`} url={telegram} network='https://t.me/NathPink'/>
+                <SocialNetwork text={`whatsapp`} url={whatsapp} network='https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2F5581989704654&e=ATM5d8yzbDaJIUuN0OTIR1llIZ2A1-bpxhQdrPkUxeDa91pdZ747xuusrDrxovdRQ7wAI1Ij_Gqr4OXv0MGsGQ&s=1'/>
                 <SocialNetwork text={`gmail`} url={gmail} network='http://gmail.com'/>
             </Page>
 
