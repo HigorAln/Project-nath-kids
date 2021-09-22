@@ -40,7 +40,7 @@ export default function Product({product}: HomeProps){
         }
       },[])
     if(router.isFallback){
-        return <p>Loding...</p>
+        return <p>Loading...</p>
     }
 
     

@@ -18,11 +18,11 @@ const Modal = dynamic(
   {ssr: false}
 )
 type HomeProps = {
-  RecommendedProducts: Document[];
+  products: Document[];
 }
 
 
-export default function Home({RecommendedProducts}: HomeProps) {
+export default function Home({products}: HomeProps) {
   const [modal, setModal] = useState(false);
   const [tema,setTema]=useState(true);
 
@@ -50,7 +50,7 @@ export default function Home({RecommendedProducts}: HomeProps) {
       <CompHeader fun={handleModal} modal={modal} tema={tema} setTema={setTema}/>
       {modal && <Modal fun={handleModal}/>}
       <Contrast />
-      <Cards RecommendedProducts={RecommendedProducts}/>
+      <Cards RecommendedProducts={products}/>
       <Seta onClick={Pular}>
         ▼
       </Seta>

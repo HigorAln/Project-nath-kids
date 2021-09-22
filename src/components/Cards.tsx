@@ -7,7 +7,6 @@ import {
 }from '../styles/components/cards'
 import ComponentCard from './ComponentCard'
 import PrismicDOM from 'prismic-dom'
-import Link from 'next/link'
 import {Document} from 'prismic-javascript/types/documents'
 
 type HomeProps = {
@@ -15,19 +14,23 @@ type HomeProps = {
 }
 
 export default function Cards({RecommendedProducts}: HomeProps) {
+
+    const Produtos = RecommendedProducts.slice(2,6)
+
     return(
         <DivPg1>
             <SpacePg2>
-                <h1>Oferta da semana</h1>
+                <h1>Offer of the week</h1>
             </SpacePg2>
             <Cartas>
-                {RecommendedProducts.map((e)=>{
+                {Produtos.map((e)=>{
                     return(
                         <DivCards key={e.id}>
                             <ComponentCard
                                 chave={e.id}
                                 title={PrismicDOM.RichText.asText(e.data.title)} 
                                 RecommendedImage={e.data.trumbnail.url}
+                                link={e.slugs[0]}
                         />
                         </DivCards>
                     )

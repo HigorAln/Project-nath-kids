@@ -7,8 +7,8 @@ export default function Rodape(){
         <Footer>
             <div>
                 <Link href='/'><a><li>Home</li></a></Link>
-                <Link href='/categories/vestidos'><a><li>Vestidos</li></a></Link>
-                <Link href='/categories/conjuntos'><a><li>Conjunto</li></a></Link>
+                <Link href='/categories/vestidos'><a><li>Dresses</li></a></Link>
+                <Link href='/categories/conjuntos'><a><li>Sets</li></a></Link>
                 <Link href='/contact'><a><li>Contact</li></a></Link>
                 <Link href='/social'><a><li>Social Networks</li></a></Link>
             </div>

@@ -67,7 +67,6 @@ export default function Vestidos({data}:HomeProps){
             setButtonMore(false)
         }
 }
-console.log(data)
     return(
         <ThemeProvider theme={tema ? ThemeWhite : ThemeDark}>
             <SEO title={`• Nath Kids |  Vestidos •  `}/>

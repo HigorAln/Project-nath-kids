@@ -50,7 +50,6 @@ export default function Contact(){
         })
 
         const json = await response.json()
-        console.log(json)
 
         setName('')
         setAssunt('')

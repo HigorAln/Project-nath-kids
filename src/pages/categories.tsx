@@ -65,7 +65,7 @@ export default function Categories({products}: HomeProps){
                 <CardCategoriesVestidos>
                     <Link href='/categories/vestidos'>
                         <Model>
-                            <h2>Vestidos</h2>
+                            <h2>Dresses</h2>
                             <img src={vestidos[2].data.trumbnail.url}/>
                         </Model>
                     </Link>
@@ -80,7 +80,7 @@ export default function Categories({products}: HomeProps){
                 <CardCategoriesConjuntos>
                     <Link href='/categories/conjuntos'>
                         <Model>
-                            <h2>Conjuntos</h2>
+                            <h2>Sets</h2>
                             <img src={conjuntos[1].data.trumbnail.url} />
                         </Model>
                     </Link>

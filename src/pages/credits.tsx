@@ -42,7 +42,7 @@ export default function Credits (){
 
             <Page>
                 <Div>
-                    Criador e desenvolvedor de todo o site:
+                    Creator and developer:
                     <span>Higor Allan</span>
                 </Div>
             </Page>
