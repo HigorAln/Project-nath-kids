@@ -98,7 +98,7 @@ export default function Categories({products}: HomeProps){
     )
 }
 
-export const getStaticProps: GetStaticProps = async ()=>{
+export const getStaticProps: GetStaticProps<HomeProps> = async ()=>{
     const products = await client().query([
         Prismic.Predicates.at('document.type','product')
       ])

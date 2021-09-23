@@ -78,6 +78,8 @@ export const Paragrafo3 = styled.p`
     letter-spacing:1px;
     margin-bottom:20px;
     color:${({theme}) => theme.color};
+    font-family: 'Comfortaa';
+    font-weight: 500;
 
 `
 export const DivRadius = styled.div`
@@ -170,15 +172,21 @@ export const DivPrice = styled.div`
     margin-bottom:30px;
     font-family: 'Ubuntu';
     color:${({theme}) => theme.color};
+    font-family: 'Comfortaa';
+    font-weight: 500;
 
     span{
         color:${({theme}) => theme.color};
         font-size:30px;
+        font-family: 'Comfortaa';
+        font-weight: 500;
     };
 
     p{
         letter-spacing:1px;
         font-size:15px;
         color:${({theme}) => theme.color};
+        font-family: 'Comfortaa';
+        font-weight: 500;
     }
 `

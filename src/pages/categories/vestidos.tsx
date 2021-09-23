@@ -114,7 +114,7 @@ export default function Vestidos({data}:HomeProps){
     )
 }
 
-export const getStaticProps: GetStaticProps = async ()=>{
+export const getStaticProps: GetStaticProps<HomeProps> = async ()=>{
     const data = await client().query([
         Prismic.Predicates.at('document.type','product')
     ])
