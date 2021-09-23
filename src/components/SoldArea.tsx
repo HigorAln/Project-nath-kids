@@ -48,11 +48,11 @@ export default function SoldArea({title, description, imagem, imagem2, price}: H
                     <p>Price: <span>{price}$</span></p>
                 </DivPrice>
 
-                <Paragrafo2>See your freet!</Paragrafo2>
+                {/* <Paragrafo2>See your freet!</Paragrafo2>
                 <DivCep>
                     <InputCEP type='number' max-maxLength='8' placeholder='your CEP' />
                     <button>Procurar</button>
-                </DivCep>
+                </DivCep> */}
                 <DivButton>
                     <Button>Add to Cart!</Button>
                     <Button>Buy now!</Button>
