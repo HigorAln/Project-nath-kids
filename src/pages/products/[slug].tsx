@@ -11,6 +11,7 @@ import dynamic from "next/dynamic"
 import { ThemeProvider } from "styled-components"
 import { ThemeDark, ThemeWhite } from "../../styles/themes/theme"
 import Footer from '../../components/Footer'
+import Prismic from 'prismic-javascript';
 
 const Modal = dynamic(
     ()=> import('../../components/Modal'),
@@ -63,8 +64,17 @@ export default function Product({product}: HomeProps){
     )
 }
 export const getStaticPaths: GetStaticPaths = async () => {
+    const product = await client().query([
+        Prismic.Predicates.at('document.type', 'products')
+    ])
+    const valor = product.results;
+
+    const paths = valor.map(value =>{ 
+        return {params : {slug: String(value.data.uid)}}
+    })
+
     return {
-        paths: [],
+        paths,
         fallback: true,
     }
 }
