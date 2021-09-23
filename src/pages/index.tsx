@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next"
+import { GetServerSideProps, GetStaticProps } from "next"
 import { client } from "../lib/prismic"
 import Prismic from 'prismic-javascript'
 import {Document} from 'prismic-javascript/types/documents'
@@ -59,7 +59,7 @@ export default function Home({products}: HomeProps) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async () =>{
+export const getStaticProps: GetStaticProps = async () =>{
   const products = await client().query([
     Prismic.Predicates.at('document.type','product')
   ])
@@ -70,13 +70,9 @@ export const getServerSideProps: GetServerSideProps = async () =>{
     Prismic.Predicates.at('document.type','recommended')
   ])
 
-  
-
   return {
     props : {
       products: products.results,
-      contrast: contrast.results,
-      RecommendedProducts: RecommendedProducts.results
     }
   }
 }
